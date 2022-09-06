@@ -1,8 +1,8 @@
 'use strict'
-const API = "https://jsonplaceholder.typicode.com/albums";
+const API_URL = "https://jsonplaceholder.typicode.com/albums";
 const albumsList = document.getElementById('albums');
 
-makeApiRequest(API).then(resolve=>{
+makeApiRequest(API_URL).then(resolve=>{
     resolve.map(album=>appendListItem(albumsList,album.title));
     addListItemClass(albumsList,'album_title');
 })
