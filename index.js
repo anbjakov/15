@@ -9,8 +9,9 @@ fetchAPI(API_URL).then(albums=>{
 
 
 function appendListItem(targetList,content){
+    const liClassName = 'album_title';
     const listNode = document.createElement('li');
-    listNode.classList.add('album_title');
+    listNode.classList.add(liClassName);
     listNode.innerHTML = content;
     targetList.append(listNode);
 }
